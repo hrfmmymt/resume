@@ -5,7 +5,7 @@
   --page-width: 182mm;
   --page-height: 257mm;
   --content-width: 148mm;
-  --content-height: calc(44 * 5mm);
+  --content-height: calc(44mm * 5mm);
   --side-margin: calc((var(--page-width) - var(--content-width)) / 2);
   --top-margin: 22mm;
 }
@@ -74,6 +74,12 @@ p {
 h1 {
   font-size: 16pt;
   top: -10mm;
+  letter-spacing: 1em;
+}
+
+.entry-date {
+  top: -7mm;
+  right: 51mm;
 }
 
 .photo {
@@ -397,26 +403,8 @@ h1 {
   }
 }
 
-.reason {
-  top: 122mm;
-
-  h2 {
-    width: 148mm;
-    height: 6mm;
-    text-align: center;
-  }
-
-  div {
-    top: 6mm;
-    width: 148mm;
-    height: 28mm;
-    padding: .5mm;
-    text-align: justify;
-  }
-}
-
 .selling-point {
-  top: 154mm;
+  top: 116mm;
 
   h2 {
     width: 148mm;
@@ -430,6 +418,72 @@ h1 {
     height: 38mm;
     padding: .5mm;
     text-align: justify;
+  }
+}
+
+.reason {
+  top: 148mm;
+
+  * {
+    position: relative;
+  }
+
+  .tbl {
+    border-spacing: 0;
+    &__hd {
+      vertical-align: top;
+      height: 6mm;
+      padding-top: .4mm;
+    }
+    &__cont {
+      height: 11mm;
+      &.is-reason {
+        text-align: left;
+        vertical-align: top;
+        text-indent: 1em;
+      }
+    }
+    & tr.is-spouse {
+      & td {
+        width: 26mm;
+        font-size: 8pt;
+      }
+    }
+  }
+
+  tr {
+    td:first-child {
+      width: 40mm;
+      text-align: center;
+    }
+
+    td:first-child + td {
+      width: 14mm;
+      text-align: center;
+    }
+
+    td:first-child + td + td {
+      width: 116mm;
+      padding: 0 4mm;
+    }
+  }
+
+  tr:first-child {
+    th {
+      height: 6mm;
+    }
+
+    th:first-child {
+      width: 94mm;
+    }
+
+    th:first-child + th {
+      width: 54mm;
+    }
+
+    th:first-child + th + th {
+      width: 114mm;
+    }
   }
 }
 
