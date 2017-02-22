@@ -44,6 +44,7 @@ body {
 
 #page-2 {
   top: var(--top-margin);
+  left: 199mm; /* fallback for Safari */
   left: calc(var(--page-width) + var(--side-margin));
   width: var(--content-width);
   height: var(--content-height);
@@ -418,6 +419,9 @@ h1 {
     height: 38mm;
     padding: .5mm;
     text-align: justify;
+    & p {
+      padding: 0 1.2mm;
+    }
   }
 }
 
@@ -441,11 +445,12 @@ h1 {
         text-align: left;
         vertical-align: top;
         text-indent: 1em;
+        padding: 0 1.2mm;
       }
     }
     & tr.is-spouse {
       & td {
-        width: 26mm;
+        width: 25mm;
         font-size: 8pt;
       }
     }
@@ -474,11 +479,11 @@ h1 {
     }
 
     th:first-child {
-      width: 94mm;
+      width: 93mm;
     }
 
     th:first-child + th {
-      width: 54mm;
+      width: 55mm;
     }
 
     th:first-child + th + th {
@@ -524,11 +529,5 @@ h1 {
   #page-2 {
     top: var(--top-margin);
     left: var(--side-margin);
-  }
-
-  .name {
-    span {
-      display: none;
-    }
   }
 }
