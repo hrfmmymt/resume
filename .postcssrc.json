@@ -1,0 +1,10 @@
+{
+  "use": [
+    "autoprefixer",
+    "postcss-nested",
+    "postcss-custom-properties",
+    "postcss-import"
+  ],
+  "input": "./src/resume.css",
+  "output": "./dist/resume.css"
+}

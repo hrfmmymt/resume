@@ -1,0 +1,23 @@
+{
+  "name": "postcss-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css": "postcss -c ./.postcssrc.json",
+    "w-css": "postcss -c ./.postcssrc.json -w --map",
+    "lint-css": "stylelint ./src/**/*.css"
+  },
+  "author": "hrfmmymt",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.5.3",
+    "postcss": "^5.2.6",
+    "postcss-cli": "^2.6.0",
+    "postcss-custom-properties": "^5.0.1",
+    "postcss-import": "^9.1.0",
+    "postcss-nested": "^1.0.0",
+    "stylefmt": "^5.1.2",
+    "stylelint": "^7.9.0"
+  }
+}
