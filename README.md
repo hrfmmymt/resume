@@ -6,7 +6,6 @@
  - [x] autoprefixer
  - [x] postcss-custom-properties
  - [x] postcss-import
- - [x] postcss-import
  - [x] postcss-nested
  - [x] stylelint
  - [x] stylefmt
