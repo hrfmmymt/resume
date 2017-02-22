@@ -7,7 +7,7 @@
     "css": "postcss -c ./.postcssrc.json",
     "w-css": "postcss -c ./.postcssrc.json -w --map",
     "lint-css": "stylelint ./src/**/*.css",
-    "build": "cpx index.html build/ && cpx dist/**.css build/dist/ && cpx static/*.png build/static/",
+    "build": "postcss -c ./.postcssrc.json && cpx ./index.html build/ && cpx ./dist/**.css build/dist/ && cpx ./static/**.png build/static/",
     "deploy": "yarn build && gh-pages -d build"
   },
   "author": "hrfmmymt",
