@@ -1,17 +1,21 @@
 {
-  "name": "postcss-starter",
+  "name": "resume",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "css": "postcss -c ./.postcssrc.json",
     "w-css": "postcss -c ./.postcssrc.json -w --map",
-    "lint-css": "stylelint ./src/**/*.css"
+    "lint-css": "stylelint ./src/**/*.css",
+    "build": "cpx index.html build/ && cpx dist/**.css build/dist/ && cpx static/*.png build/static/",
+    "deploy": "yarn build && gh-pages -d build"
   },
   "author": "hrfmmymt",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^6.5.3",
+    "cpx": "^1.5.0",
+    "gh-pages": "^0.12.0",
     "postcss": "^5.2.6",
     "postcss-cli": "^2.6.0",
     "postcss-custom-properties": "^5.0.1",
