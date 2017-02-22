@@ -5,7 +5,7 @@
   --page-width: 182mm;
   --page-height: 257mm;
   --content-width: 148mm;
-  --content-height: calc(44 * 5mm);
+  --content-height: calc(44mm * 5mm);
   --side-margin: calc((var(--page-width) - var(--content-width)) / 2);
   --top-margin: 22mm;
 }
@@ -404,7 +404,7 @@ h1 {
 }
 
 .selling-point {
-  top: 122mm;
+  top: 116mm;
 
   h2 {
     width: 148mm;
@@ -422,24 +422,38 @@ h1 {
 }
 
 .reason {
-  top: 154mm;
+  top: 148mm;
 
   * {
     position: relative;
   }
 
-  table {
+  .tbl {
     border-spacing: 0;
+    &__hd {
+      vertical-align: top;
+      height: 6mm;
+      padding-top: .4mm;
+    }
+    &__cont {
+      height: 11mm;
+      &.is-reason {
+        text-align: left;
+        vertical-align: top;
+        text-indent: 1em;
+      }
+    }
+    & tr.is-spouse {
+      & td {
+        width: 26mm;
+        font-size: 8pt;
+      }
+    }
   }
 
   tr {
-    td {
-      font-size: 11pt;
-      height: 10mm;
-    }
-
     td:first-child {
-      width: 18mm;
+      width: 40mm;
       text-align: center;
     }
 
@@ -451,18 +465,6 @@ h1 {
     td:first-child + td + td {
       width: 116mm;
       padding: 0 4mm;
-
-      h3 {
-        width: 100%;
-        padding-left: 0;
-        text-align: center;
-      }
-
-      .table-lastline {
-        width: 100%;
-        padding-right: 4mm;
-        text-align: right;
-      }
     }
   }
 
@@ -472,30 +474,16 @@ h1 {
     }
 
     th:first-child {
-      width: 18mm;
+      width: 94mm;
     }
 
     th:first-child + th {
-      width: 14mm;
+      width: 54mm;
     }
 
     th:first-child + th + th {
       width: 114mm;
     }
-  }
-
-  h2 {
-    width: 148mm;
-    height: 6mm;
-    text-align: center;
-  }
-
-  div {
-    top: 6mm;
-    width: 148mm;
-    height: 28mm;
-    padding: .5mm;
-    text-align: justify;
   }
 }
 
