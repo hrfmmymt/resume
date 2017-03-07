@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "browser-sync start --server --files '**/*'",
+    "start": "yarn serve & yarn w-css",
+    "serve": "browser-sync start --server --serveStatic dist --files 'dist/*.css, index.html'",
     "css": "postcss -c ./.postcssrc.json",
     "w-css": "postcss -c ./.postcssrc.json -w --map",
     "lint-css": "stylelint ./src/**/*.css",
