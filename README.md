@@ -9,7 +9,7 @@
  - [x] postcss-nested
  - [x] stylelint
  - [x] stylefmt
- - [x] Browsersync
+- [x] Browsersync
 
 ## Development
 
