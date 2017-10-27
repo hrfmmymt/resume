@@ -25,6 +25,3 @@ yarn start     # Edit start while w-css and autoreload on localhost:3000
 yarn build     # Build resume in dist/
 yarn deploy    # Build and Deploy to gh-pages
 ```
-
-## Deploy example
-https://hrfmmymt.github.io/resume/

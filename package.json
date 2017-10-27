@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "yarn serve & yarn w-css",
+    "start": "yarn build",
+    "watch": "yarn serve & yarn w-css",
     "serve": "browser-sync start --server --serveStatic dist --files 'dist/*.css, index.html'",
     "css": "postcss -c ./.postcssrc.json",
     "w-css": "postcss -c ./.postcssrc.json -w --map",
     "lint-css": "stylelint ./src/**/*.css",
     "build": "postcss -c ./.postcssrc.json && cpx ./index.html build/ && cpx ./dist/**.css build/dist/ && cpx ./static/**.png build/static/",
-    "deploy": "yarn build && gh-pages -d build"
+    "deploy": "yarn build && gh-pages -d build",
+    "heroku-prebuild": "yarn"
   },
   "author": "hrfmmymt",
   "license": "ISC",
@@ -26,5 +28,8 @@
     "postcss-nested": "^1.0.0",
     "stylefmt": "^5.1.2",
     "stylelint": "^7.9.0"
+  },
+  "dependencies": {
+    "express": "3.3.4"
   }
 }
