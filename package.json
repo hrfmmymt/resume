@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "browser-sync start --server --files '**/*'",
     "start": "yarn build",
     "watch": "yarn serve & yarn w-css",
     "serve": "browser-sync start --server --serveStatic dist --files 'dist/*.css, index.html'",
