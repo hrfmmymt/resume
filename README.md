@@ -9,6 +9,7 @@
  - [x] postcss-nested
  - [x] stylelint
  - [x] stylefmt
+- [x] Browsersync
 
 ## Development
 
@@ -21,6 +22,3 @@ yarn lint-css  # Lint css
 
 yarn deploy    # Deploy to gh-pages
 ```
-
-## Deploy example
-https://hrfmmymt.github.io/resume/
