@@ -25,3 +25,8 @@ yarn start     # Edit start while w-css and autoreload on localhost:3000
 yarn build     # Build resume in dist/
 yarn deploy    # Build and Deploy to gh-pages
 ```
+
+## Concept
+It is supposed to be printed as well as web browsing. Please try printing directly using the print function of various web browsers.
+
+> Web ブラウジングだけでなく、印刷されることも想定しています。各種 Web ブラウザーの印刷機能を使って直接印刷してみて下さい。
