@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url("http://fonts.googleapis.com/earlyaccess/notosansjapanese.css");
+@import url("//fonts.googleapis.com/earlyaccess/notosansjapanese.css");
 
 :root {
   --page-width: 182mm;
@@ -162,7 +162,7 @@ h1 {
 
   h2 {
     font-size: 8pt;
-    width: 14mm;
+    width: 34mm;
     height: 6mm;
   }
 
