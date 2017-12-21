@@ -44,7 +44,6 @@ body {
 
 #page-2 {
   top: var(--top-margin);
-  left: 199mm; /* fallback for Safari */
   left: calc(var(--page-width) + var(--side-margin));
   width: var(--content-width);
   height: var(--content-height);
