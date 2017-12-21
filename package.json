@@ -7,29 +7,29 @@
     "start": "yarn build",
     "watch": "yarn serve & yarn w-css",
     "serve": "browser-sync start --server --serveStatic dist --files 'dist/*.css, index.html'",
-    "css": "postcss -c ./.postcssrc.json",
-    "w-css": "postcss -c ./.postcssrc.json -w --map",
+    "css": "postcss ./src/resume.css -o ./dist/resume.css --no-map",
+    "w-css": "postcss ./src/resume.css -o ./dist/resume.css -w -m",
     "lint-css": "stylelint ./src/**/*.css",
-    "build": "postcss -c ./.postcssrc.json && cpx ./index.html build/ && cpx ./dist/**.css build/dist/ && cpx ./static/**.png build/static/",
+    "build": "postcss ./src/resume.css -o ./dist/resume.css && cpx ./index.html build/ && cpx ./dist/**.css build/dist/ && cpx ./static/**.png build/static/",
     "deploy": "yarn build && gh-pages -d build",
     "heroku-prebuild": "yarn"
   },
   "author": "hrfmmymt",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^6.5.3",
-    "browser-sync": "^2.18.8",
+    "autoprefixer": "^7.2.3",
+    "browser-sync": "^2.19.0",
     "cpx": "^1.5.0",
-    "gh-pages": "^0.12.0",
-    "postcss": "^5.2.6",
-    "postcss-cli": "^2.6.0",
-    "postcss-custom-properties": "^5.0.1",
-    "postcss-import": "^9.1.0",
-    "postcss-nested": "^1.0.0",
-    "stylefmt": "^5.1.2",
-    "stylelint": "^7.9.0"
+    "gh-pages": "^1.1.0",
+    "postcss": "^6.0.14",
+    "postcss-cli": "^4.1.1",
+    "postcss-custom-properties": "^6.2.0",
+    "postcss-import": "^11.0.0",
+    "postcss-nested": "^3.0.0",
+    "stylefmt": "^6.0.0",
+    "stylelint": "^8.4.0"
   },
   "dependencies": {
-    "express": "3.3.4"
+    "express": "4.16.2"
   }
 }

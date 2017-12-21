@@ -1,8 +1,9 @@
-module.exports = () => ({
+module.exports = ctx => ({
+  map: ctx.options.map,
   plugins: {
-    'autoprefixer': {},
+    'postcss-import': {},
     'postcss-custom-properties': {},
     'postcss-nested': {},
-    'postcss-import': {}
+    'autoprefixer': {}
   }
-});
+})
