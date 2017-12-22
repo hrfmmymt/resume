@@ -1,4 +1,8 @@
 {
+  "ignoreFiles": [
+    "./dist/*.css",
+    "./build/**/*.css"
+  ],
   "rules": {
     "block-closing-brace-newline-before": "always",
     "block-no-empty": true,

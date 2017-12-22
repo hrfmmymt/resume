@@ -1,9 +1,10 @@
 module.exports = ctx => ({
-  map: ctx.options.map,
+  map: ctx.env === 'development' ? {} : false,
   plugins: {
     'postcss-import': {},
     'postcss-custom-properties': {},
     'postcss-nested': {},
-    'autoprefixer': {}
+    'autoprefixer': {},
+    'cssnano': ctx.env === 'development' ? false : {}
   }
 })
