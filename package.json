@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "yarn build",
-    "watch": "yarn serve & yarn w-css",
+    "watch": "yarn serve & yarn watch:css",
     "serve": "browser-sync start --server --serveStatic dist --files 'dist/*.css, index.html'",
-    "css": "postcss ./src/resume.css -o ./dist/resume.css --no-map",
-    "w-css": "postcss ./src/resume.css -o ./dist/resume.css -w -m",
+    "dev:css": "NODE_ENV=development node ./node_modules/postcss-cli/bin/postcss ./src/resume.css -o ./dist/resume.css -m",
+    "watch:css": "NODE_ENV=development node ./node_modules/postcss-cli/bin/postcss ./src/resume.css -o ./dist/resume.css -w -m",
+    "build:css": "NODE_ENV=production node ./node_modules/postcss-cli/bin/postcss ./src/resume.css -o ./dist/resume.css --no-map",
     "lint-css": "stylelint ./src/**/*.css",
-    "build": "postcss ./src/resume.css -o ./dist/resume.css && cpx ./index.html build/ && cpx ./dist/**.css build/dist/ && cpx ./static/**.png build/static/",
+    "build": "yarn build:css && cpx ./index.html build/ && cpx ./dist/**.css build/dist/ && cpx ./static/**.png build/static/",
     "deploy": "yarn build && gh-pages -d build",
     "heroku-prebuild": "yarn"
   },
@@ -30,6 +31,7 @@
     "stylelint": "^8.4.0"
   },
   "dependencies": {
+    "cssnano": "^3.10.0",
     "express": "4.16.2"
   }
 }
