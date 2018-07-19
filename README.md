@@ -1,5 +1,5 @@
 # resume
-
+![resume screenshot](./media/ss.jpg)
 ## Contains
 - [x] Yarn
 - [x] PostCSS
