@@ -445,6 +445,15 @@ h1 {
         vertical-align: top;
         text-indent: 1em;
         padding: 0 1.2mm;
+
+        & ul {
+          list-style-position: inside;
+        }
+
+        & li {
+          padding-left: 2em;
+          text-indent: -1.5em;
+        }
       }
     }
     & tr.is-spouse {
