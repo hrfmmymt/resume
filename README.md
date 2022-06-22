@@ -1,6 +1,8 @@
 # resume
+japanese traditional resume/cv on web.
+
 ![resume screenshot](./media/ss.jpg)
-## Contains
+## contains
 - [x] Yarn
 - [x] PostCSS
  - [x] autoprefixer
@@ -11,7 +13,7 @@
  - [x] stylefmt
 - [x] Browsersync
 
-## Development
+## development
 
 ```sh
 yarn install   # Init
@@ -27,7 +29,7 @@ yarn deploy    # Build and Deploy to gh-pages
 ```
 and also you can deploy to heroku.
 
-## Concept
-It is supposed to be printed as well as web browsing. Please try printing directly using the print function of various web browsers.
+## concept
+it is supposed to be printed as well as web browsing. please try printing directly using the print function of various web browsers.
 
 > Web ブラウジングだけでなく、印刷されることも想定しています。各種 Web ブラウザーの印刷機能を使って直接印刷してみて下さい。
