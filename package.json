@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines": {
-    "node": "^10.16.0",
-    "yarn": "1.x"
-  },
   "scripts": {
     "start": "yarn build",
     "watch": "yarn serve & yarn watch:css",
